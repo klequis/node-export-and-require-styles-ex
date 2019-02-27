@@ -1,7 +1,7 @@
 # Node Export & Require Styles
 
 
-<img src="cover.png" width="350" title="hover text">
+<img src="cover.png" width="550" title="hover text">
 
 See the README.md in each folder
 
