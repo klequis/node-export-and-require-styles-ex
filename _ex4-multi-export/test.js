@@ -1,10 +1,7 @@
-var math = require('./lib/math').default
-console.log(math.add(1,3))
+const add = require('./lib/math').add
+const subtract = require('./lib/math').subtract
 
-// you could also do this
-var add = require('./lib/math').default.add
-console.log(add(1,3))
-
-
+console.log('add(1,3) =>', add(1,3))
+console.log('subtract(4,2) =>', subtract(4,2))
 
 

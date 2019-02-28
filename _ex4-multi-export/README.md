@@ -9,8 +9,7 @@ const add = (a, b) => {
 const subtract = (a, b) => {
   return a - b
 }
-
-export default {
+export {
   add,
   subtract
 }
@@ -23,30 +22,26 @@ export default {
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.default = void 0;
+exports.subtract = exports.add = void 0;
 
 const add = (a, b) => {
   return a + b;
 };
 
+exports.add = add;
+
 const subtract = (a, b) => {
   return a - b;
 };
 
-var _default = {
-  add,
-  subtract
-};
-exports.default = _default;
+exports.subtract = subtract;
 ```
 
 **test.js**
 ```js
-var math = require('./lib/math').default
-console.log(math.add(1,3))
+const add = require('./lib/math').add
+const subtract = require('./lib/math').subtract
 
-// you could also do this but seems long winded and one of the
-// following examples will show a better way
-var add = require('./lib/math').default.add
-console.log(add(1,3))
+console.log('add(1,3) =>', add(1,3))
+console.log('subtract(4,2) =>', subtract(4,2))
 ```
